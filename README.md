@@ -31,7 +31,7 @@
 
 ## 数据集
 
-数据集详细介绍见[PTM](https://github.com/yao8839836/PTM)
+数据集详细介绍见[PTM](https://github.com/yao8839836/PTM)，评测指标为`Precision@N, Recall@N`
 
 ## 运行方法
 
