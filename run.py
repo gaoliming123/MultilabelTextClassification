@@ -33,8 +33,7 @@ if __name__ == '__main__':
 
     x = import_module('models.' + model_name)
     config = x.Config(dataset, embedding)
-    model = x.Model(config).to(config.device)
-
+    
     if model_name == 'Bert':
         start_time = time.time()
         print("Loading data...")
@@ -56,6 +55,7 @@ if __name__ == '__main__':
         config.n_vocab = len(vocab)
 
     # train
+    model = x.Model(config).to(config.device)
     if model_name != 'Transformer' and model_name != 'Bert':
         init_network(model)
     print(model.parameters)
