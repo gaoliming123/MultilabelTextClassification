@@ -94,7 +94,7 @@ def test(config, model, test_iter):
     model.eval()
     start_time = time.time()
     p5, p10, p20, r5, r10, r20, test_loss = evaluate(config, model, test_iter, test=True)
-    msg = 'Test Loss: {0:>5.2},  Test Precision@5: {1:>6.2%}, Test Precision@10: {1:>6.2%}, Test Precision@20: {1:>6.2%}, Test Recall@5: {1:>6.2%}, Test Recall@5: {1:>6.2%}, Test Recall@10: {1:>6.2%}, Test Recall@20: {1:>6.2%}, '
+    msg = 'Test Loss: {0:>5.2},  Test Precision@5: {1:>6.2%}, Test Precision@10: {2:>6.2%}, Test Precision@20: {3:>6.2%}, Test Recall@5: {4:>6.2%}, Test Recall@5: {5:>6.2%}, Test Recall@10: {6:>6.2%}, Test Recall@20: {7:>6.2%}, '
     print(msg.format(test_loss, p5, p10, p20, r5, r10, r20))
     time_dif = get_time_dif(start_time)
     print("Time usage:", time_dif)
