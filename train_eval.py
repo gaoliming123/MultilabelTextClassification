@@ -50,7 +50,7 @@ def train(config, model, train_iter, dev_iter, test_iter):
         for i, (trains, labels) in enumerate(train_iter):
             outputs = model(list(trains))
             model.zero_grad()
-            if 'Bert' in model.bert_name:
+            if hasattr(model, 'bert_name'):
                 labels = labels.to(config.device)
             loss = loss_fn(outputs, labels)
             loss.backward()
@@ -109,7 +109,7 @@ def evaluate(config, model, data_iter, test=False):
     with torch.no_grad():
         for texts, labels in data_iter:
             outputs = model(texts)
-            if 'Bert' in model.bert_name:
+            if hasattr(model, 'bert_name'):
                 labels = labels.to(config.device)
             loss = loss_fn(outputs, labels)
             loss_total += loss
