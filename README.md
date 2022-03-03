@@ -1,6 +1,8 @@
 # 中文多标签文本分裂
 
 ## 目录
+
+```
 .
 ├── README.md
 ├── models             模型文件
@@ -23,8 +25,9 @@
     │   ├── test.txt
     │   ├── train.txt
     │   └── vocab.pkl
-    ├── log
-    └── saved_dict
+    ├── log            日志
+    └── saved_dict     模型保存
+```
 
 ## 数据集
 
